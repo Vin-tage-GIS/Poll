@@ -1,1 +1,1 @@
-web: gunicorn 'bitpoll.wsgi'
+web: gunicorn 'bitpoll.wsgi' --log-file -
