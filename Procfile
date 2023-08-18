@@ -1,1 +1,1 @@
-web: gunicorn 'bitpoll.wsgi' --log-file -
+web: python manage.py collectstatic && gunicorn 'bitpoll.wsgi'
