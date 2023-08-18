@@ -1,0 +1,1 @@
+web: gunicorn 'bitpoll.wsgi'
