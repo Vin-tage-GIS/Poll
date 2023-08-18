@@ -1,1 +1,1 @@
-web: python manage.py collectstatic && gunicorn 'bitpoll.wsgi'
+web: python manage.py collectstatic --noinput && gunicorn 'bitpoll.wsgi'
