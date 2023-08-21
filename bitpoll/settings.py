@@ -36,7 +36,7 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 #was this one
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'static','static')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
@@ -246,11 +246,11 @@ WSGI_APPLICATION = 'bitpoll.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'verceldb', 
-        'USER': 'default',
-        'PASSWORD': 'nOwyK7dY8xEV',
-        'HOST': 'ep-dark-frost-29085156-pooler.us-east-1.postgres.vercel-storage.com', 
-        'PORT': '5432',
+        'NAME': 'railway', 
+        'USER': 'postgres',
+        'PASSWORD': 'oYIgnWQ9kww0afxaF2A6',
+        'HOST': 'containers-us-west-150.railway.app', 
+        'PORT': '6107',
 }
 }
 
