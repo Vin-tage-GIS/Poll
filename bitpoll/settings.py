@@ -36,13 +36,13 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 #was this one
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'https://polling-system-aod20ic5i-nyatado98.vercel.app/static/'
+STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['*']
 
