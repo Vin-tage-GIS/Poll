@@ -19,7 +19,7 @@
                 <h1>{% trans 'Create a poll' %}</h1>
                 <hr/>
                 <form method="POST" class="form" action="{% url 'index' %}">
-                    {% csrf_token %}
+                   
                     <div class="form-step">
                         <div class="number">{% trans 'Step 1' %}</div>
                         <div class="title">{% trans 'Select Type' %}</div>
