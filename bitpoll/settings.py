@@ -120,6 +120,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://web-production-9209d.up.railway.app",
     # Other trusted origins
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-9209d.up.railway.app",
+    ]
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
 
