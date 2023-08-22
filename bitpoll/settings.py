@@ -247,6 +247,7 @@ WSGI_APPLICATION = 'bitpoll.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -416,3 +417,5 @@ from .settings_local import *
 
 INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
