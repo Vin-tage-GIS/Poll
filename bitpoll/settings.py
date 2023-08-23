@@ -418,4 +418,10 @@ from .settings_local import *
 INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# send mail
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '17005d776171e1'
+EMAIL_HOST_PASSWORD = '795f662ec6fcb0'
+EMAIL_PORT = '2525'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
