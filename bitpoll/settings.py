@@ -36,7 +36,7 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 #was this one
-STATIC_ROOT = os.path.join(BASE_DIR,'static','static')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
@@ -301,7 +301,7 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 
 LANGUAGE_CODE = 'de-de'
 
-TIME_ZONE = 'Europe/Berlin'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -419,9 +419,21 @@ INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
 
 # send mail
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '17005d776171e1'
-EMAIL_HOST_PASSWORD = '795f662ec6fcb0'
-EMAIL_PORT = '2525'
+# EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+# EMAIL_HOST_USER = '17005d776171e1'
+# EMAIL_HOST_PASSWORD = '795f662ec6fcb0'
+# EMAIL_PORT = '2525'
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'danndong080@gmail.com'
+EMAIL_HOST_PASSWORD = 'okzumpamraiksdcq'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# 
+
+# should be in procfile removed there
+# python manage.py collectstatic --noinput &&
