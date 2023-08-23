@@ -68,7 +68,7 @@ LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 
 SITE_NAME = 'Bitpoll'
-BASE_URL = 'https://bitpoll.mafiasi.de'
+BASE_URL = 'https://web-production-9209d.up.railway.app/'
 
 # Application definition
 
@@ -328,7 +328,7 @@ MESSAGE_TAGS = {
 }
 
 # Url to the Base Homepage and Text on the Link, leave empty to not use this option
-HOME_URL = "https://example.com"
+HOME_URL = "https://web-production-9209d.up.railway.app/"
 HOME_URL_NAME = "Dashboard"
 
 # Test mail functionality by printing mails to console:
