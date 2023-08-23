@@ -93,11 +93,11 @@
         </form> {% endcomment %}
 
             {% if debug %}
-                <div class="footer-warning">
+                {% comment %} <div class="footer-warning">
                     {% blocktrans %}
                     <b>Warning!</b> {{ site_name }} is configured with <code>DEBUG = True</code>.
                     {% endblocktrans %}
-                </div>
+                </div> {% endcomment %}
             {% endif %}
         </div>
     </footer>
