@@ -81,7 +81,7 @@
             target="_blank">{% trans 'Imprint' %}</a><span
                     class="separator"></span><a href="{% url 'technical' %}">{% trans 'Technical Info' %}</a><span
            class="separator"></span>
-            {% trans 'Current timezone is' %} {% get_current_timezone as TIME_ZONE %}{{ TIME_ZONE }}<span
+            {% comment %} {% trans 'Current timezone is' %} {% get_current_timezone as TIME_ZONE %}{{ TIME_ZONE }}<span
            class="separator"></span>
         <form class="form-inline" action="{% url 'set_language' %}" method="post">
             {% csrf_token %}
@@ -90,7 +90,7 @@
                 &middot;
                 <button name="language" value="en" class="btn-link lang-btn" type="submit">English</button>
             </p>
-        </form>
+        </form> {% endcomment %}
 
             {% if debug %}
                 <div class="footer-warning">
