@@ -38,7 +38,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, '_static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = 'https://polling-system-aod20ic5i-nyatado98.vercel.app/static/'
 
 ALLOWED_HOSTS = []
 
