@@ -401,3 +401,12 @@ from .settings_local import *
 
 INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://poll-production-6317.up.railway.app/",
+    # Other trusted origins
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://poll-production-6317.up.railway.app/",
+    ]
