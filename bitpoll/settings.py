@@ -431,7 +431,7 @@ EMAIL_HOST_USER = 'maono@northriftsolutions.com'
 EMAIL_HOST_PASSWORD = 'M@ono2030'
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = True
+EMAIL_USE_SSL = False
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # 
 
