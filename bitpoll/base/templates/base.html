@@ -29,7 +29,7 @@
 <div id="wrapper">
     <header id="header">
         <nav class="navbar navbar-inverse navbar-static-top sticky-top">
-            <div class="container-fluid" style="background-color:white">
+            <div class="container-fluid" style="background-color:#075e54;">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -37,34 +37,34 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ base_url }}" style="color:#006400;padding:23px;font-size:20px">{{ site_name }}</a>
+                    <a class="navbar-brand" href="{{ base_url }}" style="color:#fff;padding:23px;font-size:20px">{{ site_name }}</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="{% url 'index' %}" class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-plus"></i>{% trans 'Create poll' %}</a></li>
+                        <li><a href="{% url 'index' %}" class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-plus"></i>{% trans 'Create poll' %}</a></li>
                         {% if home_url %}
-                            <li><a href="{{ home_url }}"class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-home"></i>{{ home_url_name }}</a></li>
+                            <li><a href="{{ home_url }}"class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-home"></i>{{ home_url_name }}</a></li>
                         {% endif %}
-                        <li><a href="{% url 'about' %}"class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-question-circle"></i>{% trans 'About' %}</a></li>
+                        <li><a href="{% url 'about' %}"class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-question-circle"></i>{% trans 'About' %}</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                     {% if request.user.is_anonymous %}
                         {% if register %}
-                            <li><a href="{% url 'registration_request_account' %}"class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-pencil"></i>{% trans 'Register' %}</a></li>
+                            <li><a href="{% url 'registration_request_account' %}"class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-pencil"></i>{% trans 'Register' %}</a></li>
                         {% endif %}
-                        <li><a href="{% url 'login' %}?next={{ request.path }}"class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-sign-in"></i>{% trans 'Login' %}</a></li>
+                        <li><a href="{% url 'login' %}?next={{ request.path }}"class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-sign-in"></i>{% trans 'Login' %}</a></li>
                     {% else %}
-                        <li><a href="{% url 'settings' %}"class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-user"></i>{{ request.user.get_displayname }}</a></li>
+                        <li><a href="{% url 'settings' %}"class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-user"></i>{{ request.user.get_displayname }}</a></li>
                         {% if group_management_enabled %}
                             {% load group_tags %}
                             {% open_invitations as oi %}
                             {% if oi %}
-                                <span class="badge" class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px">{{ oi }}</span>
+                                <span class="badge" class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px">{{ oi }}</span>
                             {% endif %}
-                            <li><a href="{% url 'groups_index' %}" class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-group"></i>{% trans 'Groups' %}</a></li>
+                            <li><a href="{% url 'groups_index' %}" class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-group"></i>{% trans 'Groups' %}</a></li>
                         {% endif %}
-                        <li><a href="{% url 'settings' %}" class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-cog"></i>{% trans 'Settings' %}</a></li>
-                        <li><a href="{% url 'logout' %}" class="font-weight-bold" style="color:#006400;padding:23px;font-size:20px"><i class="fa-solid fa-sign-in"></i>{% trans 'Logout' %}</a></li>
+                        <li><a href="{% url 'settings' %}" class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-cog"></i>{% trans 'Settings' %}</a></li>
+                        <li><a href="{% url 'logout' %}" class="font-weight-bold" style="color:#fff;padding:23px;font-size:20px"><i class="fa-solid fa-sign-in"></i>{% trans 'Logout' %}</a></li>
                     {% endif %}
                     </ul>
                 </div>
