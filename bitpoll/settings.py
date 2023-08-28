@@ -426,10 +426,10 @@ PIPELINE.update(PIPELINE_LOCAL)
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.northriftsolutions.com'
-EMAIL_HOST_USER = 'maono@northriftsolutions.com'
-EMAIL_HOST_PASSWORD = 'M@ono2030'
-EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'danndong080@gmail.com'
+EMAIL_HOST_PASSWORD = 'okzumpamraiksdcq'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
