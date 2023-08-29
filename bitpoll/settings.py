@@ -64,7 +64,7 @@ LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 
 SITE_NAME = 'Bitpoll'
-BASE_URL = 'https://bitpoll.mafiasi.de'
+BASE_URL = 'https://poll-production-6317.up.railway.app'
 
 # Application definition
 
@@ -285,7 +285,7 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
 
 LANGUAGE_CODE = 'de-de'
 
-TIME_ZONE = 'Europe/Berlin'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -410,3 +410,10 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://poll-production-6317.up.railway.app",
     ]
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'danndong080@gmail.com'
+EMAIL_HOST_PASSWORD = 'okzumpamraiksdcq'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
