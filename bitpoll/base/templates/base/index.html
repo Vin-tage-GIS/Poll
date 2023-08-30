@@ -27,20 +27,20 @@
                     <div class="form-group"><select class="form-control script-hidden" id="create-type-field"
                                                     name="{{ poll_form.type.name }}">
                         {# TODO dynamisch, inklusive data-values unten #}
-                        <option value="datetime" {% if poll_form.type.value == "datetime" %}selected="selected"{% endif %}>
+                        <!-- <option value="datetime" {% if poll_form.type.value == "datetime" %}selected="selected"{% endif %}>
                           {% trans 'Date and Time' %}
                         </option>
                         <option value="date" {% if poll_form.type.value == "date" %}selected="selected"{% endif %}>
                           {% trans 'Date' %}
-                        </option>
+                        </option> -->
                         <option value="universal" {% if poll_form.type.value == "universal" %}selected="selected"{% endif %}>
                           {% trans 'Normal Poll' %}
                         </option>
-                        {% comment %}
+                        <!-- {% comment %}
                         <option value="numeric" {% if poll_form.type.value == "numeric" %}selected="selected"{% endif %}>
                           {% trans 'Numeric' %}
                         </option>
-                        {% endcomment %}
+                        {% endcomment %} -->
                     </select>
                         <div class="script-only">
                             <ul id="create-type-list" class="type-choices">
