@@ -103,7 +103,3 @@ PIPELINE_LOCAL = {}
 #                 "cn=Server-AG,ou=groups,dc=mafiasi,dc=de"],
 #    "is_superuser": "cn=Server-AG,ou=groups,dc=mafiasi,dc=de"
 #}
-EMAIL_HOST = 'mail.northriftsolutions.com'
-EMAIL_HOST_USER = 'dan@northriftsolutions.com'
-EMAIL_HOST_PASSWORD = 'a=%1x+GC6iWv'
-EMAIL_PORT = 587
