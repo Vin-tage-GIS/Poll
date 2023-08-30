@@ -419,11 +419,16 @@ INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
 
 # send mail
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '17005d776171e1'
-EMAIL_HOST_PASSWORD = '795f662ec6fcb0'
-EMAIL_PORT = '2525'
-
+# EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+# EMAIL_HOST_USER = '17005d776171e1'
+# EMAIL_HOST_PASSWORD = '795f662ec6fcb0'
+# EMAIL_PORT = '2525'
+EMAIL_HOST = 'mail.northriftsolutions.com'
+EMAIL_HOST_USER = 'dan@northriftsolutions.com'
+EMAIL_HOST_PASSWORD = 'a=%1x+GC6iWv'
+EMAIL_PORT = 587
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'mail.northriftsolutions.com'
