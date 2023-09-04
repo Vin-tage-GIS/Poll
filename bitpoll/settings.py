@@ -68,7 +68,7 @@ LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 
 SITE_NAME = 'Maono'
-BASE_URL = 'https://web-production-9209d.up.railway.app/'
+BASE_URL = 'https://web-production-9209d.up.railway.app'
 
 # Application definition
 
