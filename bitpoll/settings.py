@@ -436,7 +436,6 @@ EMAIL_HOST_PASSWORD = 'M@ono2030'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # 
 
 # should be in procfile removed there
