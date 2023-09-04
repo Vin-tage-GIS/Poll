@@ -67,7 +67,7 @@ TEMPLATE_ALLOWABLE_SETTINGS_VALUES = [
 LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 
-SITE_NAME = 'Bitpoll'
+SITE_NAME = 'Maono'
 BASE_URL = 'https://web-production-9209d.up.railway.app/'
 
 # Application definition
@@ -440,3 +440,5 @@ EMAIL_USE_SSL = False
 
 # should be in procfile removed there
 # python manage.py collectstatic --noinput &&
+
+# app passord for email northriftsolutionsmaoni@gmail.com

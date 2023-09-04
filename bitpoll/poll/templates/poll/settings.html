@@ -62,7 +62,7 @@
                 <select id="timezone-select" class="form-control" name="{{ form.timezone_name.name }}">
                     {% for timezone in timezones %}
                         {% if timezone == form.timezone_name.value %}
-                            <option value="{{ timezone }}" selected="selected"> {{ timezone }}</option>
+                            <option value="{{ timezone }}" selected="selected">Africa/Nairobi</option>
                         {% else %}
                             <option value="{{ timezone }}"> {{ timezone }}</option>
                         {% endif %}
@@ -190,7 +190,7 @@
             <a href="{% url 'poll_editchoicevalues' poll.url %}">{% trans 'Edit possible answer values' %}</a><br>
             <a href="{% url 'invitations' poll.url %}">{% trans 'Manage invitations' %}</a><br>
             <a href="{% url 'poll_copy' poll.url %}">{% trans 'Copy poll' %}</a><br>
-            <a href="https://api.whatsapp.com/send?text={% url 'poll_vote' poll.url %}" target="_blank">Share on WhatsApp</a><br>
+            <a href="https://api.whatsapp.com/send?text={{ base_url }}{% url 'poll_vote' poll.url %}" target="_blank">Share on WhatsApp</a><br>
             <a class="red" href="{% url 'poll_delete' poll.url %}">{% trans 'Delete this poll' %}</a>
         </div></form>
         </div>

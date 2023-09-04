@@ -1118,6 +1118,8 @@ def settings(request, poll_url):
     :param poll_url:
     :return:
     """
+    base_url = request.build_absolute_uri(reverse('home'))
+
     current_poll = get_object_or_404(Poll, url=poll_url)
     groups = None
 
@@ -1173,6 +1175,7 @@ def settings(request, poll_url):
         'timezones': all_timezones,
         'user_error': user_error,
         'user_select': user,
+        'url' : base_url
     })
 
 
