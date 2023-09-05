@@ -61,7 +61,7 @@
                                 <label for="{{ choice.id }}_{{ value.id }}" class="fa-solid fa-{{ value.icon }}"></label>
                             </td>
                         {% endfor %}
-                        <td class="vote-comment">
+                       <!--  <td class="vote-comment">
                             <div class="script-only">
                                 <button class="btn btn-sm btn-default vote-choice-edit"
                                         title="{{ _('Add a comment') }}"><i
@@ -69,7 +69,7 @@
                             </div>
                             <input type="text" class="vote-choice-comment form-control" name="comment_{{ choice.id }}" title=""
                                    value="{{ comment }}"/>
-                        </td>
+                        </td> -->
                         <td>
                             {% for event in events %}
                                 <span class="label label-info">{{ event.DTSTART }} - {{ event.DTEND }}: <b>{{ event.NAME }}</b></span>
@@ -84,17 +84,17 @@
                 </tr>
                 <tr>
                     <td colspan="{{ matrix_len }}">
-                      <label for="name">{% trans 'Your name:' %}</label>
+                      <!-- <label for="name">{% trans 'Your name:' %}</label> -->
                     </td>
                     <td colspan="4">
-                        <input type="text" name="name" title="{% trans 'Your name' %}"
+                        <input type="hidden" name="name" title="{% trans 'Your name' %}"
                                 {% if request.user.is_authenticated %}
                                     value="{{ request.user.get_displayname }}" readonly="readonly"
                                 {% elif current_vote.name %}
                                     value="{{ current_vote.name }}" readonly="readonly"
                                 {%  endif %}
                                 maxlength="80"
-                                class="form-control" id="name"/>
+                                class="form-control" id="name" value="anonymous" hidden/>
 
                         {% if poll.anonymous_allowed %}
                             <br>
@@ -102,24 +102,24 @@
                                 title="{% trans 'Post anonymous vote' %}" value="true"
                                    {% if current_vote.anonymous %}
                                         checked
-                                   {% endif %}
+                                   {% endif %} hidden
                             />
-                            <label for="anonymous">{% trans 'Post anonymous vote' %}</label> <br/>
+                            <!-- <label for="anonymous">{% trans 'Post anonymous vote' %}</label> <br/> -->
                         {% endif %}
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="{{ matrix_len }}">
+                    <!-- <td colspan="{{ matrix_len }}">
                       <label for="comment">{% trans 'Comment:' %}</label>
                       <span class="help-inline">{% trans '(optional)' %}</span>
-                    </td>
+                    </td> -->
                     <td colspan="4">
-                        <textarea title="Comment:" name="comment" class="form-control" id="comment" cols="40" rows="5">{{ current_vote.comment }}</textarea><br/>
+                        <textarea title="Comment:" style="display:none;" name="comment" class="form-control" id="comment" cols="40" rows="5">{{ current_vote.comment }}</textarea><br/>
                 </tr>
                 <tr>
                     <td colspan="{{ matrix_len }}"></td>
-                    <td colspan="4">
-                        <button class="action primary block" type="submit" name="submit" value="Vote">
+                    <td colspan="3">
+                        <button class="action primary block" type="submit" name="submit" value="Vote" style="margin-top: -80px;">
                             <i class="fa-solid fa-check"></i>
                             <span>{% trans 'Save vote' %}</span>
                         </button>
