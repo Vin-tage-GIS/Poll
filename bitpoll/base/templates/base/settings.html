@@ -21,6 +21,7 @@
                     <th>{% trans 'Poll title' %}</th>
                     <th>{% trans 'Due-Date' %}</th>
                     <th colspan="4">{% trans 'Tags' %}</th>
+                    <th>{% trans 'Action' %}</th>
                 </tr>
                 {% for poll in polls %}
                     <tr>
@@ -58,6 +59,7 @@
                               <span class="label label-default form-control"><i class="fa-solid fa-eye-slash"></i> {% trans 'Not watching' %} </span>
                             {% endif %}
                         </td>
+                         <td><a href="https://api.whatsapp.com/send?text={{ base_url }}/poll/{{ poll.url }}/vote"><img src="/static/image/whatsapp.png" style="height: 25px;"></a></td>
                     </tr>
                 {% endfor %}
             </table>
