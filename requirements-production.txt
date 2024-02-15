@@ -60,7 +60,7 @@ lxml==4.9.2
     # via caldav
 markdown==3.4.1
     # via django-markdownify
-psycopg2-binary==2.9.5
+psycopg2-binary==2.9.9
     # via -r requirements-production.in
 pyasn1==0.4.8
     # via

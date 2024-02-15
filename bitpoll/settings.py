@@ -36,13 +36,20 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 #was this one
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+# #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# # URL prefix for static files.
+# # Example: "http://example.com/static/", "http://static.example.com/"
+# STATIC_URL = 'https://polling-system-aod20ic5i-nyatado98.vercel.app/static/'
+#to
+
+STATIC_ROOT = os.path.join(ROOT_DIR, '_static')
+
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'https://polling-system-aod20ic5i-nyatado98.vercel.app/static/'
+STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['*']
 
@@ -68,7 +75,8 @@ LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = '/login/'
 
 SITE_NAME = 'Maono'
-BASE_URL = 'https://web-production-9209d.up.railway.app'
+# BASE_URL = 'https://web-production-9209d.up.railway.app'
+BASE_URL = "http://127.0.0.1:8000/"
 
 # Application definition
 
@@ -248,16 +256,24 @@ WSGI_APPLICATION = 'bitpoll.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default':{
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'railway', 
+#         'USER': 'postgres',
+#         'PASSWORD': 'oYIgnWQ9kww0afxaF2A6',
+#         'HOST': 'containers-us-west-150.railway.app', 
+#         'PORT': '6107',
+# }
+# }
+
 DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway', 
-        'USER': 'postgres',
-        'PASSWORD': 'oYIgnWQ9kww0afxaF2A6',
-        'HOST': 'containers-us-west-150.railway.app', 
-        'PORT': '6107',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
-}
+
 
 
 CACHES = {
@@ -328,7 +344,8 @@ MESSAGE_TAGS = {
 }
 
 # Url to the Base Homepage and Text on the Link, leave empty to not use this option
-HOME_URL = "https://web-production-9209d.up.railway.app/"
+# HOME_URL = "https://web-production-9209d.up.railway.app/"
+HOME_URL = "http://127.0.0.1:8000/"
 HOME_URL_NAME = "Dashboard"
 
 # Test mail functionality by printing mails to console:
