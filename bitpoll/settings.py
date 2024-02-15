@@ -355,7 +355,7 @@ HOME_URL_NAME = "Dashboard"
 IMPRINT_URL = ""
 IMPRINT_TEXT = """
 <h1>Impressum</h1>
-<p>Text goes here</p>
+<p>Text goes</p>
 """
 
 LOCALE_PATHS = (os.path.join(ROOT_DIR, 'locale'), )
